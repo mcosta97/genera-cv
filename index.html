@@ -1,58 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae - Matias Costa</title>
+    <title>Genera Tu CV</title>
 
     <!-- Librerias Externas -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <!-- Librerias Propias -->
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
-<body>
-    <div id="cabecera" class="row">
-        <div id="nombre-descripcion" class="col-9">
-            <p class="nombre">Matias Dylan Costa</p>
-            <p class="titulo">Analista Programador Ssr.</p>
-            <p id="resumen"></p>
-        </div>
-        <div id="imagen" class="col-3">
-            <img class="img-fluid img-thumbnail" src="peyo.jpg" />
-        </div>
-    </div>
-    <div id="datos-contacto" class="row text-center">
-        <div class="col-4">
-            <i class="far fa-envelope"></i>
-            <span id="email"></span>
-        </div>
-        <div class="col-4">
-            <i class="far fa-phone"></i>
-            <span id="telefono"></span>
-        </div>
-        <div class="col-4">
-            <i class="far fa-map-marked"></i>
-            <span id="direccion"></span>
-        </div>
-    </div>
-    <div id="contenido" class="row">
-        <div id="experiencia" class="col-8">
-            <div></div>
-                <h3>EXPERIENCIA LABORAL</h3>
-                <div id="experiencias">
 
+<body>
+    <div class="container">
+        <div class="text-center">
+            <h4 class="m-4">Genera Tu CV!</h4>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="heading-datos-iniciales">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#datos-iniciales" aria-expanded="true" aria-controls="datos-iniciales">
+                                Datos iniciales
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="datos-iniciales" class="collapse show" aria-labelledby="heading-datos-iniciales" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Nombre completo</span>
+                                </div>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Titulo personal</span>
+                                </div>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Mi resumen</span>
+                                </div>
+                                <textarea type="text" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading-datos-personales">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#datos-personales"
+                                aria-expanded="false" aria-controls="datos-personales">
+                                Datos personales
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="datos-personales" class="collapse" aria-labelledby="heading-datos-personales" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="input-group mb-3 col-8">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Correo electronico</span>
+                                    </div>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="input-group mb-3 col-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Teléfono</span>
+                                    </div>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="input-group mb-3 col-8">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Calle</span>
+                                    </div>
+                                    <input type="text" class="form-control">
+                                </div>
+                                <div class="input-group mb-3 col-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Altura</span>
+                                    </div>
+                                    <input type="number" class="form-control">
+                                </div>
+                                <div class="input-group mb-3 col-12">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">Localidad</span>
+                                    </div>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="heading-experiencias">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#experiencias"
+                                aria-expanded="false" aria-controls="experiencias">
+                                Experiencias
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="experiencias" class="collapse" aria-labelledby="heading-experiencias" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <button onclick="agregarExperiencia()" class="btn btn-block btn-secondary mb-1">
+                                        <span>Nueva</span>
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                    <ul class="list-group">
+                                    </ul>
+                                </div>
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div class="input-group mb-3 col-12">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Puesto</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mb-3 col-12">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Empresa</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mb-3 col-6">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Desde</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                        <div class="input-group mb-3 col-6">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Hasta</span>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="puntuaciones" class="col-4">
-            
+            <button class="btn btn-primary btn-lg mt-2">¡Generar Curriculum!</button>
         </div>
     </div>
 </body>
+
 </html>
