@@ -1,0 +1,41 @@
+#cabecera, #datos-contacto, #contenido {
+    padding: 10px;
+}
+
+#cabecera {
+    height: 200px;
+    background-color: midnightblue;
+    color: white;
+}
+
+#datos-contacto {
+    background-color: cadetblue;
+    color: white;
+}
+
+img {
+    float: right;
+    border-radius: 50%;
+}
+
+.nombre {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0px;
+}
+
+.titulo {
+    color: lightblue;
+}
+
+.experiencia-header {
+    font-weight: bold;
+}
+
+.fa-square {
+    margin-right: 10px;
+    color: lightskyblue;
+    font-size: 20px;
+    text-shadow: 1px 1px 2px black;
+}
