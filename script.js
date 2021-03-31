@@ -14,5 +14,12 @@ $(document).ready(function() {
         let id = componenteId.split("_")[1]
         experiencias.splice(id, 1)
         $("#"+componenteId).remove()
-    });
+    })
+
+    $("#puesto").on('keydown', function(e) {
+        let valor = e.target.value
+    })
+    $("#empresa").on('keydown', function(e) {
+        let valor = e.target.value
+    })
 })
